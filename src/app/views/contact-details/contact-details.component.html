@@ -1,0 +1,19 @@
+<section class="contact-details flex column gap">
+  <a routerLink="/contact"><button class="simple-button">⬅</button></a>
+  <img src="{{ getContactImageUrl }}" alt="" />
+  <h3>
+    <span class="fa-regular user-icon"></span>
+    {{ contact.name }}
+  </h3>
+  <h3>
+    <span class="fa-regular phone-icon"></span>
+    {{ contact.phone }}
+  </h3>
+  <h3>
+    <span class="fa-regular email-icon"></span>
+    {{ contact.email }}
+  </h3>
+  <section class="transfer">
+    <transfer-fund [contact]="contact"></transfer-fund>
+  </section>
+</section>

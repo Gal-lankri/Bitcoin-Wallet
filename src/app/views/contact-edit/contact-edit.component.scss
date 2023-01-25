@@ -1,0 +1,19 @@
+.contact-edit{
+    position: absolute;
+    top: 10vh;
+    background-color: rgba(194, 189, 189, 0.479);
+    height: 90vh;
+    width: 100vw;
+    a{
+        width: fit-content;
+        align-self: flex-end;
+    }
+    .form-container{
+        background-color:  rgba(235, 169, 70, 0.753);
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+}

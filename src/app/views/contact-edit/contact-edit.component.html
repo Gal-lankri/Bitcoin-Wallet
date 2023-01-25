@@ -1,0 +1,18 @@
+<section class="contact-edit">
+  <div *ngIf="contact" class="form-container simple-form">
+    <a routerLink="/contact"><button class="simple-button">X</button></a>
+    <h2>{{ contact._id ? "Edit" : "Add" }} contact</h2>
+    <form (ngSubmit)="onSaveContact()" class="flex column gap">
+      <label for="name">Name:</label>
+      <input [(ngModel)]="contact.name" type="text" name="name" id="name" />
+      <label for="email">Email:</label>
+      <input [(ngModel)]="contact.email" type="email" name="email" id="email" />
+      <label for="phone">Phone:</label>
+      <input [(ngModel)]="contact.phone" type="tel" name="phone" id="phone" />
+      <section class="actions flex space-between">
+        <button class="simple-button">Back</button>
+        <button class="simple-button">Save</button>
+      </section>
+    </form>
+  </div>
+</section>

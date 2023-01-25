@@ -1,0 +1,8 @@
+<section class="transfer flex column gap ">
+  <h3>Transfer to {{ contact.name }}</h3>
+  <form (ngSubmit)="onTransfer()" class="flex gap">
+    <label for="amount">Amount: </label>
+    <input [(ngModel)]="amount" type="number" name="amount" id="amount"/>
+    <button class="simple-button">Transfer</button>
+  </form>
+</section>

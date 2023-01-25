@@ -1,0 +1,4 @@
+<section class="contact-list simple-cards-grid">
+<contact-preview (onRemove)="onRemove.emit($event)" *ngFor="let contact of contacts" [contact]="contact" style="cursor: pointer"></contact-preview>
+<a routerLink="/contact/edit"><button class="add-contact-btn fa-solid circle-plus-icon"></button></a>
+</section>

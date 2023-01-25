@@ -1,0 +1,20 @@
+.contact-list{
+
+    padding: 20px 20px;
+    a{
+        align-self: center;
+
+    }
+    .add-contact-btn{
+        background: none;
+        border: none;
+        // width: fit-content;
+        align-self: center;
+        font-size: 40px;
+       color: rgb(27, 99, 180);
+
+       &:hover{
+        color:rgb(36, 126, 230) ;
+       }
+    }
+}
