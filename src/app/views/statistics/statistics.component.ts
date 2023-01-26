@@ -33,7 +33,7 @@ export class StatisticsComponent implements OnInit {
         fill: true,
         tension: 0.5,
         borderColor: 'black',
-        backgroundColor: 'rgb(123, 143, 161, 0.5)',
+        backgroundColor: 'rgb(48, 30, 103, 0.8)',
       },
     ],
     labels: this.chartsX,

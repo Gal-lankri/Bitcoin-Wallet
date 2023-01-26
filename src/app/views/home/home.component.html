@@ -1,6 +1,6 @@
-<section *ngIf="user" class='home-page flex column gap'>
-    <h2>Hello {{user.name}} !</h2>
-    <p>👛 Coins: {{user.coins}}</p>
-    <p>💰 BTC: {{bitcoinRate}}</p>
-    <moves-list  [moves]="getMoves()"></moves-list>
-  </section>
+<section *ngIf="user" class="home-page flex column gap">
+  <h2>Hello {{ user.name }} !</h2>
+  <p><span>👛 Coins:</span> {{ user.coins }}</p>
+  <p><span>💰 BTC:</span> {{ bitcoinRate }}</p>
+  <moves-list [moves]="getMoves()"></moves-list>
+</section>

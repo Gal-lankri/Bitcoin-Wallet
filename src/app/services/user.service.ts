@@ -41,7 +41,7 @@ export class UserService {
     const move = new Move(contact._id, contact.name, Date.now(), amount);
     let user: any = localStorage.getItem(this._STORAGE_KEY);
     user = JSON.parse(user);
-    if (user.coins < amount) return alert('You don\'t have enough mony')
+    if (user.coins < amount) return alert('You don\'t have enough money')
     user.moves.push(move);
     user.coins -= amount;
     this._updateUser(user);
