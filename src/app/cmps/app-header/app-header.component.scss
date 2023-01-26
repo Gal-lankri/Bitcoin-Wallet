@@ -2,13 +2,17 @@
     background-color: #ebd2bf;
     height: 10vh;
     
-    padding: 20px 20px;
+    // padding: 20px 20px;
 
     nav{
-       a{ &.active{
-        padding: 20px 2px;
-            border-bottom: 2px solid black;
-            background-color: rgba(160, 160, 160, 0.596);
+
+       a{ 
+        padding: 5px;
+        &.active{
+        // padding: 20px 2px;
+            // border-bottom: 2px solid black;
+            font-weight: bold;
+            color: rgba(255, 121, 12, 0.877);
             transition: all 0.2s;
         }}
     }

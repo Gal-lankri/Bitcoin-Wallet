@@ -1,7 +1,7 @@
 <section [routerLink]="['/contact', contact._id]" class="contact-preview flex column" [ngStyle]="{'backgroundImage':getContactImageUrl}">
 <h4>{{contact.name}}</h4>
 <section class="actions">
-    <button (click)="onRemoveContact($event)">X</button>
-    <button (click)="onEdit($event)">Edit</button>
+    <button class="actions-btn" (click)="onRemoveContact($event)">Delete</button>
+    <button class="actions-btn" (click)="onEdit($event)">Edit</button>
 </section>
 </section>

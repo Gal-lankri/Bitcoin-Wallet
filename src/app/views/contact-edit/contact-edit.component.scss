@@ -1,7 +1,7 @@
 .contact-edit{
     position: absolute;
     top: 10vh;
-    background-color: rgba(194, 189, 189, 0.479);
+    background-color: rgba(194, 189, 189, 0.562);
     height: 90vh;
     width: 100vw;
     a{
@@ -9,11 +9,17 @@
         align-self: flex-end;
     }
     .form-container{
-        background-color:  rgba(235, 169, 70, 0.753);
+        background-color:  rgba(235, 169, 70, 0.938);
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%,-50%);
+        input{
+            padding: 5px;
+            background-color: rgba(255, 228, 196, 0.87);
+            border: 1px solid rgb(182, 180, 180);
+            border-radius: 3px;
+        }
     }
 
 }

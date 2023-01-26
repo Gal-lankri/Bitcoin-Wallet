@@ -29,6 +29,13 @@
         transition: transform 0.2s;
         justify-content: space-between;
         color: white;
+        .actions-btn{
+            all: unset;
+            color: white;
+            &:hover{
+                color: rgb(241, 214, 157);
+            }
+        }
     }
 
     &:hover .actions {

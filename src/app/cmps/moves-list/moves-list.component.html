@@ -1,4 +1,4 @@
-<section *ngIf="moves" class="moves-list flex column gap">
+<section *ngIf="moves.length" class="moves-list flex column gap">
   <h3>Your last 3 moves:</h3>
   <ul *ngFor="let move of moves">
     <li>To: {{move.to}}</li>

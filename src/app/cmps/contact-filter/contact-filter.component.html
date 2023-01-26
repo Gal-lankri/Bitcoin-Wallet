@@ -1,5 +1,6 @@
 <section class="filter">
     <form>
-        <input [(ngModel)]="contactFilter.term" (ngModelChange)="onSetFilter()" type="search" name="term" id="term" placeholder="Search Contact">
+        <label for="term">Search contact: </label>
+        <input [(ngModel)]="contactFilter.term" (ngModelChange)="onSetFilter()" type="search" name="term" id="term" placeholder="Enter contact name">
     </form>
 </section>
