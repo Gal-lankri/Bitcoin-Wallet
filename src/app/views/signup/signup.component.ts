@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -7,10 +8,11 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
   userName!: string;
 
-  onSignup(){
-    this.userService.signup(this.userName)
+  onSignup() {
+    this.userService.signup(this.userName);
+    this.router.navigate(['/']);
   }
 }

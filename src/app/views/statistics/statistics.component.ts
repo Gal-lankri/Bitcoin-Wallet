@@ -33,7 +33,7 @@ export class StatisticsComponent implements OnInit {
         fill: true,
         tension: 0.5,
         borderColor: 'black',
-        backgroundColor: 'rgba(255,0,0,0.3)',
+        backgroundColor: 'rgb(123, 143, 161, 0.5)',
       },
     ],
     labels: this.chartsX,
@@ -48,31 +48,9 @@ export class StatisticsComponent implements OnInit {
 
   async loadCharts() {
     const data: any = await lastValueFrom(this.bitcoinService.getMarketPrice());
-    console.log(data.values);
     data.values.map((value: any) => {
       this.chartsX.push(new Date(value.x * 1000).toDateString().slice(4, 15)),
         this.chartsY.push(value.y);
     });
-    console.log(this.chartsX);
-
-    // this.bitcoinService.getMarketPrice().subscribe({
-    //   next: (response: any): void => {
-    //     this.chartsY.push(
-    //       response.values.map((value: any) => {
-    //         return Math.ceil(value.y)
-    //       })
-    //     );
-    //     this.chartsX.push(
-    //       response.values.map((value: any) => {
-    //         return new Date(value.x * 1000).toDateString().slice(4, 15);
-    //       })
-    //     );
-    //     console.log(this.chartsX);
-    //     console.log(this.chartsY);
-    //   },
-    //   error: (err: HttpErrorResponse): void => {
-    //     console.log(err);
-    //   },
-    // });
   }
 }
