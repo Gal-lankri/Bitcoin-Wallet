@@ -17,4 +17,24 @@ export class BitcoinService {
         })
       );
   }
+
+  getMarketPrice() {
+    return this.http
+      .get(`https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true`)
+      .pipe(
+        catchError((err: HttpErrorResponse) => {
+          return throwError(() => err);
+        })
+      );
+  }
+
+  getConfirmedTransactions() {
+    return this.http
+      .get(`https://api.blockchain.info/charts/n-transactions?timespan=1months&format=json&cors=true`)
+      .pipe(
+        catchError((err: HttpErrorResponse) => {
+          return throwError(() => err);
+        })
+      );
+  }
 }

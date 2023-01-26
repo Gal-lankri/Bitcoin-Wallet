@@ -7,11 +7,16 @@ import { ContactEditComponent } from './views/contact-edit/contact-edit.componen
 import { ContactResolver } from './services/contact.resolver';
 import { SignupComponent } from './views/signup/signup.component';
 import { AuthGuard } from './guards/auth.guard';
+import { StatisticsComponent } from './views/statistics/statistics.component';
 
 const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
+  },
+  {
+    path: 'statistics',
+    component: StatisticsComponent
   },
   {
     path: 'contact',

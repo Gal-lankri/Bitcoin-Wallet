@@ -1,1 +1,13 @@
-<p>statistics works!</p>
+<section *ngIf="chartsX.length" class="statistics">
+  <canvas
+    baseChart
+    width="700"
+    height="400"
+    [data]="lineChartData"
+    [type]="'line'"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend"
+  >
+    >
+  </canvas>
+</section>
