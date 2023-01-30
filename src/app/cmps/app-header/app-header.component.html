@@ -1,9 +1,11 @@
 <header class='app-header flex justify-center align-center space-between full'>
     <h1>Mister Bitcoin</h1>
-    <nav class='flex justify-center align-center'>
+    <nav class='main-nav flex justify-center align-center'>
       <a routerLink="signup" routerLinkActive="active">Signup</a>|
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Home</a>|
       <a routerLink="contact" routerLinkActive="active" >Contacts</a>|
       <a routerLink="statistics" routerLinkActive="active" >Statistics</a>
     </nav>
+    <button class="mobile-btn" (click)="toggleMobileMenu()">☰</button>
   </header>
+  <mobile-menu (toggleMenu)="toggleMobileMenu()" class="mobile-menu" *ngIf="showMobileMenu"></mobile-menu>

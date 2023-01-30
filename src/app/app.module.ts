@@ -18,6 +18,7 @@ import { SignupComponent } from './views/signup/signup.component';
 import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
 import { MovesListComponent } from './cmps/moves-list/moves-list.component';
 import { StatisticsComponent } from './views/statistics/statistics.component';
+import { MobileMenuComponent } from './cmps/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { StatisticsComponent } from './views/statistics/statistics.component';
     SignupComponent,
     TransferFundComponent,
     MovesListComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    MobileMenuComponent
   ],
   imports: [
     BrowserModule,

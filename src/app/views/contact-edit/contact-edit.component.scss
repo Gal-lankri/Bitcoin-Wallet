@@ -1,9 +1,10 @@
 .contact-edit{
-    position: absolute;
-    top: 10vh;
+    z-index: 10;
+    top: 0;
     background-color: rgba(194, 189, 189, 0.562);
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
+    position: fixed;
     a{
         width: fit-content;
         align-self: flex-end;
@@ -19,6 +20,9 @@
             background-color: rgba(255, 228, 196, 0.87);
             border: 1px solid rgb(182, 180, 180);
             border-radius: 3px;
+        }
+        .simple-button{
+            width: fit-content;
         }
     }
 

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { lastValueFrom, Observable } from 'rxjs';
 import { Contact } from 'src/app/models/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'contact-edit',
@@ -21,16 +22,19 @@ export class ContactEditComponent implements OnInit {
     // this.route.data.subscribe()
 
     this.route.data.subscribe(({ contact }) => {
-      this.contact = contact || new Contact()
+      this.contact = contact || new Contact();
     });
   }
 
-  async onSaveContact() {
-    await lastValueFrom(this.contactService.saveContact(this.contact));
-    this.contactService.loadContacts()
-    this.contacts$ = this.contactService.contacts$
-    console.log(this.contacts$)
+  async onSaveContact(form: NgForm) {
+    const contactId = this.contact._id;
+    await lastValueFrom(
+      this.contactService.saveContact({ ...form.value, _id: contactId })
+    );
+    this.contactService.loadContacts();
+    this.contacts$ = this.contactService.contacts$;
+    console.log(this.contacts$);
 
-    this.router.navigateByUrl('/contact')
+    this.router.navigateByUrl('/contact');
   }
 }

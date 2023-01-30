@@ -1,8 +1,11 @@
 .signup{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
     margin: auto;
-    width: 50vw;
+    // width: 50vw;
     form{
-        
         background-color: burlywood;
     }
     input{

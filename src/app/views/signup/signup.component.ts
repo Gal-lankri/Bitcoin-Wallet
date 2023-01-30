@@ -12,7 +12,6 @@ export class SignupComponent implements AfterViewInit {
   constructor(private userService: UserService, private router: Router) {}
   ngAfterViewInit(): void {
     this.name.nativeElement.focus()
-    throw new Error('Method not implemented.');
   }
   userName!: string;
   @ViewChild('name') name!: ElementRef<HTMLInputElement>;

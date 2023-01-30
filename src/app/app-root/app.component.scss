@@ -1,15 +1,16 @@
 .main-app {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-background-color: rgb(240, 213, 164);
-    main {
-        flex-grow: 1;
-        width: 100%;
-    }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 213, 164);
+  
+  main {
+    flex-grow: 1;
+    width: 100%;
+  }
 
-    > footer {
-        background-color: #111;
-        color: white;
-    }
+  > footer {
+    background-color: #111;
+    color: white;
+  }
 }
