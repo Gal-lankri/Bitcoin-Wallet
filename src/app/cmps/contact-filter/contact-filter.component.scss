@@ -1,5 +1,8 @@
 .filter{
-    padding: 5px 20px;
+    padding: 10px 20px;
+    @media (max-width: 600px) {
+        padding-top: 12vh;
+      }
     input{
         padding: 5px;
         background-color: rgba(255, 228, 196, 0.747);

@@ -8,7 +8,7 @@
       class="flex column gap"
     >
       <label for="name">Name:</label>
-      <input ngModel="{{ contact.name }}" type="text" name="name" id="name" />
+      <input required ngModel="{{ contact.name }}" type="text" name="name" id="name" />
       <label for="email">Email:</label>
       <input
         ngModel="{{ contact.email }}"
@@ -20,7 +20,7 @@
       <input ngModel="{{ contact.phone }}" type="tel" name="phone" id="phone" />
       <section class="actions flex space-between">
         <a routerLink="/contact"><button type="button" class="simple-button">Back</button></a>
-        <button class="simple-button">Save</button>
+        <button class="simple-button" [disabled]="form.invalid">Save</button>
       </section>
     </form>
   </div>

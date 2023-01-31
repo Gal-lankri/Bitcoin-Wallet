@@ -33,13 +33,16 @@ export class StatisticsComponent implements OnInit {
         fill: true,
         tension: 0.5,
         borderColor: 'black',
-        backgroundColor: 'rgb(48, 30, 103, 0.8)',
+        backgroundColor: 'rgb(3, 0, 28,0.7)',
+        pointBackgroundColor: 'rgba(150,150,200,0.8)',
+        pointBorderColor: 'rgb(3, 0, 28,0.7)',
       },
     ],
     labels: this.chartsX,
   };
   public lineChartOptions: ChartOptions<'line'> = {
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
   };
   public lineChartLegend = true;
   ngOnInit(): void {

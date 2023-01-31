@@ -1,15 +1,14 @@
 <section *ngIf="chartsX.length" class="statistics flex column">
   <h2>Market Price (USD)</h2>
   <h4>The average USD market price across major bitcoin exchanges</h4>
-  <canvas
-    baseChart
-    width="700"
-    height="400"
-    [data]="lineChartData"
-    [type]="'line'"
-    [options]="lineChartOptions"
-    [legend]="lineChartLegend"
-  >
+  <div class="chart-container">
+    <canvas
+      baseChart
+      [data]="lineChartData"
+      [type]="'line'"
+      [options]="lineChartOptions"
+      [legend]="lineChartLegend"
     >
-  </canvas>
+    </canvas>
+  </div>
 </section>
