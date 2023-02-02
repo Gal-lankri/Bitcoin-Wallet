@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, lastValueFrom } from 'rxjs';
+import { Move } from 'src/app/models/move.model';
 import { User } from 'src/app/models/user.model';
 import { BitcoinService } from 'src/app/services/bitcoin.service';
 import { UserService } from 'src/app/services/user.service';
@@ -12,19 +13,17 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeComponent implements OnInit {
   constructor(
-    private UserService: UserService,
+    private userService: UserService,
     private BitcoinService: BitcoinService
   ) {}
   user!: User;
   users: any;
   bitcoinRate!: string | object;
-
-  ngOnInit(): void {
-    this.UserService.getUser().subscribe((user) => {
-      this.user = user;
-    });
-    console.log(this.user);
-
+  userMoves!: object[];
+  async ngOnInit(): Promise<void> {
+    this,this.userService.getUser()
+    this.userService.users$.subscribe((user) => (this.user = user));
+    this.getMoves();
     this.BitcoinService.getRate(100).subscribe({
       next: (response: string | object): void => {
         this.bitcoinRate = response;
@@ -34,8 +33,8 @@ export class HomeComponent implements OnInit {
       },
     });
   }
+
   getMoves() {
-    const moves = this.user.moves.slice(-3)
-    return moves;
+    return this.user.moves.slice(-3);
   }
 }

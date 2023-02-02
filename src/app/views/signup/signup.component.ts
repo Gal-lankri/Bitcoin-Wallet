@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -16,8 +17,10 @@ export class SignupComponent implements AfterViewInit {
   userName!: string;
   @ViewChild('name') name!: ElementRef<HTMLInputElement>;
 
-  onSignup() {
-    this.userService.signup(this.userName);
+  onSignup(form:NgForm) {
+    console.log(form.value);
+    
+    this.userService.signup(form.value.name);
     this.router.navigate(['/']);
   }
   setFocus() {

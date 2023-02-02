@@ -1,7 +1,7 @@
 <section *ngIf="moves.length" class="moves-list flex column gap">
-  <h3>Your last 3 moves:</h3>
+  <h3>{{contact ? 'Your transfers to ' + contact.name : "Your last 3 transfers:"}}</h3>
   <ul *ngFor="let move of moves">
-    <li><span>To:</span> {{ move.to }}</li>
+    <li *ngIf="!contact"><span>To:</span> {{ move.to }}</li>
     <li><span>At:</span> {{ move.at | date : "dd/MM/yyyy hh:mm a" }}</li>
     <li><span>Amount:</span> {{ move.amount }} coins</li>
   </ul>

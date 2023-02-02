@@ -21,6 +21,7 @@ onRemoveContact(contactId:string):void{
   this.contactService.deleteContact(contactId)
 
 }
+
 ngOnInit(): void {
  this.contactService.loadContacts()
  this.contacts$ = this.contactService.contacts$

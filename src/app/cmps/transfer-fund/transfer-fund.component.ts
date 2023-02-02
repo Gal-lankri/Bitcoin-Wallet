@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Contact } from 'src/app/models/contact.model';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,10 +11,10 @@ import { UserService } from 'src/app/services/user.service';
 export class TransferFundComponent {
   constructor(private userService: UserService) {}
   @Input() contact!: Contact;
-  amount!: number;
-  onTransfer() {
+  amount!: number | null;
+  onTransfer(form: NgForm) {
     if (!this.amount) return;
-    this.userService.addMove(this.contact, this.amount);
-    this.amount = 0;
+    this.userService.addMove(this.contact, form.value.amount);
+    this.amount = null;
   }
 }

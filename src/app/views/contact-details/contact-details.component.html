@@ -16,4 +16,7 @@
   <section class="transfer">
     <transfer-fund [contact]="contact"></transfer-fund>
   </section>
+  <section *ngIf="getContactTransfer()" class="move-list">
+    <moves-list [moves]="getContactTransfer()" [contact]="contact"></moves-list>
+  </section>
 </section>
