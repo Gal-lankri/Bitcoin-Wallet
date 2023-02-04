@@ -40,7 +40,7 @@
   &:hover .actions {
     transform: translateY(0);
   }
-  @media (hover: none) {
+  @media (max-width: 600px) {
     .actions {
       transform: translateY(0);
     }
