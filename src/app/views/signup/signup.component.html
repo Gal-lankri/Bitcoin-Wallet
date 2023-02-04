@@ -1,6 +1,6 @@
 <section class="signup flex column">
   <form #form="ngForm"  (ngSubmit)="onSignup(form)" class="simple-form">
-    <img src="/src/assets/images/bitcoin-logo.png" alt="">
+    <img src="https://res.cloudinary.com/boards/image/upload/v1675542722/samples/bitcoin-logo_ejjzns.png" alt="">
     <label for="name"></label>
     <input #name required [(ngModel)]="userName" type="text" name="name" id="name" placeholder="Enter your name" [autofocus]/>
     <button [disabled]="form.invalid" class="simple-button">Signup</button>
