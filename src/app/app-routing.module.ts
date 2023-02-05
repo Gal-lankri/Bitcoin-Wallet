@@ -16,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: 'statistics',
-    component: StatisticsComponent
+    component: StatisticsComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'contact',
