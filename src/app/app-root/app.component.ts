@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) {}
   title = 'Bitcoin Wallet';
   ngOnInit() {
-    if (!localStorage.getItem('user')) this.router.navigateByUrl('signup');
+    if (!localStorage.getItem('user')) this.router.navigate(['/signup']);
   }
 }
